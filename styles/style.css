@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {
+    --color-primario: #F5F5DC;
+    --color-secundario: #333333;
+    --color-terciario: #FF0000;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+    line-height: 1.2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 0.75rem 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.header__menu__link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.header__logo {
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.presentacion {
+    flex: 1;
+    padding: 0.75rem 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.presentacion__contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2.2rem;
+    font-family: var(--fuente-krona);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+    display: inline-block;
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.Presentacion__enlaces {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.presentacion__enlaces__subtitulos {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.presentacion__enlaces__link {
+    width: 100%;
+    max-width: 550px;
+    border: 2px solid var(--color-terciario);
+    text-align: center;
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.presentacion__enlaces__link img {
+    height: 2rem;
+    width: auto;
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 0.75rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .header, .presentacion {
+        padding: 0.75rem 10%;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 2rem;
+    }
+    
+    .presentacion__enlaces__link {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header, .presentacion {
+        padding: 0.75rem 5%;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 1.6rem;
+    }
+    
+    .presentacion__contenido__texto {
+        font-size: 1.2rem;
+    }
+    
+    .presentacion__enlaces__link {
+        max-width: 450px;
+        font-size: 1.1rem;
+    }
+    
+    .header__logo {
+        width: 220px;
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.5rem;
+    }
+    
+    .header__menu {
+        gap: 1rem;
+    }
+    
+    .header__logo {
+        width: 180px;
+        margin-top: 0.75rem;
+    }
+    
+    .presentacion {
+        padding: 0.5rem;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 1.4rem;
+    }
+    
+    .presentacion__contenido__texto {
+        font-size: 1rem;
+    }
+    
+    .presentacion__enlaces__link {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
